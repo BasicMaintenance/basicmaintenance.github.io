@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/1769913474331021.png");
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: saturate(130%) blur(3px);
+    border: 2px solid rgb(238, 182, 103);
+    height:500px;
+    width: 500px;
+    margin: 20px;
+    padding: 50px;
+}
+
+.card h3 {
+    font-family: "Jacquarda Bastarda 9", sans-serif;
+    font-size: 25px;
+    color: rgb(238, 182, 103);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.card ul {
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+}
+
+.card a:link, .card a:visited {
+    font-family: "Micro 5", sans-serif;
+    color: rgb(238, 182, 103);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.card a:hover {
+    font-family: "Micro 5", sans-serif;
+    color: rgb(255, 130, 4);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.card:hover {
+    backdrop-filter: brightness(120%) blur(2px);
+}
+
+
