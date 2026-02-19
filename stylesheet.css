@@ -111,6 +111,7 @@ html, body {
 @media screen and (max-width: 1100px) {
     html, body {
         overflow: visible;
+        overflow-x: hidden;
     }    
 
     .hero {
