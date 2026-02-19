@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: auto;
+
+    background-image: url("/images/hero.jpg");
+    background-attachment: fixed;
+}
+
+.heading-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+.heading {
+    text-align: center;
+    font-size: 7rem;
+    font-family: "throwupz";
+    color: rgb(238, 182, 103);
+    text-shadow: -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.card {
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    width: 30rem;
+    padding: 3rem;
+    margin: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: saturate(130%) blur(3px);
+    border: 2px solid rgb(238, 182, 103);
+    box-shadow: -0.5rem 0.5rem 1rem  rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    text-align: center;
+    font-family: "urban", sans-serif;
+    font-size: 3rem;
+    color: rgb(238, 182, 103);
+    padding-bottom: 3rem;
+}
+
+.card ul {
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+}
+
+.card a:link, .card a:visited {
+    font-family: "Micro 5", sans-serif;
+    color: rgb(238, 182, 103);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.card a:hover {
+    font-family: "Micro 5", sans-serif;
+    color: rgb(217, 0, 255);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.card:hover {
+    backdrop-filter: brightness(120%) blur(2px);
+}
+
+.fill {
+    display: flex;
+    flex: 1;
+}
+
+/* .imgcard {
+    background-color: lightgrey;
+    width: 15rem;
+    height: 30rem+5px;
+    margin: 5px 0 5px;
+    border: 2px black solid;
+} */
