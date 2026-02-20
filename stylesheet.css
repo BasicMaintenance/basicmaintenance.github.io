@@ -112,9 +112,9 @@ html, body {
 
     .hero {
         overflow-x: hidden;
+        overflow-y: clip;
         background-position: left fixed;
         justify-content: flex-start;
-        height: auto;
     }
 
     /* .heading-wrapper {
