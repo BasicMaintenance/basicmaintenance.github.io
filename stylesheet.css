@@ -110,12 +110,13 @@ html, body {
 
 @media screen and (max-width: 1100px) {
     html, body {
-        overflow-y: scroll;
+        overflow:unset;
+        overflow-y: visible;
     }    
 
     .hero {
         overflow-x: hidden;
-        background-position: left;
+        background-position: left fixed;
         justify-content: flex-start;
     }
 
