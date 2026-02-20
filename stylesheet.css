@@ -114,6 +114,7 @@ html, body {
         overflow-x: hidden;
         background-position: left fixed;
         justify-content: flex-start;
+        height: auto;
     }
 
     /* .heading-wrapper {
