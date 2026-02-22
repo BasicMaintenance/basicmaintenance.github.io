@@ -182,6 +182,47 @@ li {
     opacity: 1; 
 }
 
+.playButton {
+    position: relative; 
+    display: inline-block; 
+    text-align: right; 
+    font-family: "conduit-itc-medium"; 
+    color: white; 
+    font-size: 32px; 
+    margin: 2px 10px; 
+    text-decoration: none; 
+    background: none; 
+    z-index: 1; 
+
+    width: 300px;
+
+.list button::before { 
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    left: 15%; 
+    width: 700px;
+    height: 34px;
+    background: url("images/select-bar-x.png") no-repeat center center; background-size: contain;
+    transform: translate(-50%, -50%); 
+    opacity: 0; 
+    z-index: -1; 
+    pointer-events: none; 
+} 
+    
+.list button:hover::before { 
+    opacity: 1; 
+}
+
+#playButton {
+    font-color: gray;
+    cursor: pointer;
+}
+
+#playButton:active {
+    font-color: gray;
+}
+
 
 
 
