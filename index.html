@@ -24,18 +24,18 @@
     <div class="container">
         <h1>"Homepage"</h1>
         <ul class="list">
-            <li><a href="https://old.reddit.com/"  class="hoverLink">REDDIT</a></li>
-            <li><a href="https://www.youtube.com/"  class="hoverLink">YOUTUBE</a></li>
-            <li><a href="https://account.proton.me/mail"  class="hoverLink">PROTONMAIL</a></li>
+            <li><a href="https://old.reddit.com/" >REDDIT</a></li>
+            <li><a href="https://www.youtube.com/" >YOUTUBE</a></li>
+            <li><a href="https://account.proton.me/mail" >PROTONMAIL</a></li>
         </ul>
         <img class="divider" src="images/gradient-divider.png" alt="">
         <ul class="list">
-            <li><a href="https://www.udemy.com/" class="hoverLink">UDEMY</a></li>
-            <li><a href="https://www.w3schools.com/" class="hoverLink">W3 SCHOOLS</a></li>
-            <li><a href="https://github.com/" class="hoverLink">GITHUB</a></li>
-            <li><a href="https://bflix.la/" class="hoverLink">BFLIX</a></li>
-            <li><a href="https://monkeytype.com/" class="hoverLink">MONKEYTYPE</a></li>
-            <li><a href="https://chatgpt.com/" class="hoverLink">CHATGPT</a></li>
+            <li><a href="https://www.udemy.com/">UDEMY</a></li>
+            <li><a href="https://www.w3schools.com/">W3 SCHOOLS</a></li>
+            <li><a href="https://github.com/">GITHUB</a></li>
+            <li><a href="https://bflix.la/">BFLIX</a></li>
+            <li><a href="https://monkeytype.com/">MONKEYTYPE</a></li>
+            <li><a href="https://chatgpt.com/">CHATGPT</a></li>
         </ul>
     </div>
 
@@ -43,18 +43,18 @@
 
     <audio id="hoverSound" src="select.ogg" preload="auto"></audio>
 
-    <script>
-    const links = document.querySelectorAll(".hoverLink");
-    const sound = document.getElementById("hoverSound");
+<script>
+  const links = document.querySelectorAll("a");
+  const audioSrc = "select.ogg"; // path to your sound
 
-    links.forEach(link => {
-        link.addEventListener("mouseenter", function () {
-        sound.pause();          // stop if already playing
-        sound.currentTime = 0;  // rewind
-        sound.play();
-        });
+  links.forEach(link => {
+    link.addEventListener("mouseenter", function () {
+      const sound = new Audio(audioSrc);
+      sound.volume = 1;
+      sound.play();
     });
-    </script>
+  });
+</script>
 
 </body>
 </html>
