@@ -183,6 +183,7 @@ li {
 }
 
 .playButton {
+    all: unset;
     position: relative; 
     display: inline-block; 
     text-align: right; 
