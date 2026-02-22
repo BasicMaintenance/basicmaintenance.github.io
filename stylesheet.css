@@ -212,11 +212,11 @@ li {
     pointer-events: none; 
 } 
     
-#playButton:hover::before { 
+button:hover::before { 
     opacity: 1; 
 }
 
-#playButton:active {
+button:active {
     color: gray;
 }
 
