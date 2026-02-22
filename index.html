@@ -24,20 +24,37 @@
     <div class="container">
         <h1>"Homepage"</h1>
         <ul class="list">
-            <li><a href="https://old.reddit.com/">REDDIT</a></li>
-            <li><a href="https://www.youtube.com/">YOUTUBE</a></li>
-            <li><a href="https://account.proton.me/mail">PROTONMAIL</a></li>
+            <li><a href="https://old.reddit.com/"  id="hoverLink">REDDIT</a></li>
+            <li><a href="https://www.youtube.com/"  id="hoverLink">YOUTUBE</a></li>
+            <li><a href="https://account.proton.me/mail"  id="hoverLink">PROTONMAIL</a></li>
         </ul>
         <img class="divider" src="images/gradient-divider.png" alt="">
         <ul class="list">
-            <li><a href="https://www.udemy.com/">UDEMY</a></li>
-            <li><a href="https://www.w3schools.com/">W3 SCHOOLS</a></li>
-            <li><a href="https://github.com/">GITHUB</a></li>
-            <li><a href="https://bflix.la/">BFLIX</a></li>
-            <li><a href="https://monkeytype.com/">MONKEYTYPE</a></li>
-            <li><a href="https://chatgpt.com/">CHATGPT</a></li>
+            <li><a href="https://www.udemy.com/" id="hoverLink">UDEMY</a></li>
+            <li><a href="https://www.w3schools.com/" id="hoverLink">W3 SCHOOLS</a></li>
+            <li><a href="https://github.com/" id="hoverLink">GITHUB</a></li>
+            <li><a href="https://bflix.la/" id="hoverLink">BFLIX</a></li>
+            <li><a href="https://monkeytype.com/" id="hoverLink">MONKEYTYPE</a></li>
+            <li><a href="https://chatgpt.com/" id="hoverLink">CHATGPT</a></li>
         </ul>
     </div>
+
     <img class="title" src="images/logo.png" alt="">
+
+    <audio id="hoverSound" src="select.ogg" preload="auto"></audio>
+
+    <script>
+        const link = document.getElementById("hoverLink");
+        const sound = document.getElementById("hoverSound");
+
+        let hasPlayed = false;
+
+        link.addEventListener("mouseenter", function () {
+            if (!hasPlayed) {
+                sound.play();
+                hasPlayed = true;
+            }
+        });
+    </script>
 </body>
 </html>
