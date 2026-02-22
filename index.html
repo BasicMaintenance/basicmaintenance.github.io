@@ -44,17 +44,13 @@
     <audio id="hoverSound" src="select.ogg" preload="auto"></audio>
 
     <script>
-        const link = document.getElementById("hoverLink");
-        const sound = document.getElementById("hoverSound");
+    const link = document.getElementById("hoverLink");
+    const sound = document.getElementById("hoverSound");
 
-        let hasPlayed = false;
-
-        link.addEventListener("mouseenter", function () {
-            if (!hasPlayed) {
-                sound.play();
-                hasPlayed = true;
-            }
-        });
+    link.addEventListener("mouseenter", function () {
+        sound.currentTime = 0; // rewind to start
+        sound.play();
+    });
     </script>
 </body>
 </html>
