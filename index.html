@@ -47,19 +47,17 @@
 <script>
   const links = document.querySelectorAll("a");
 
-  const hoverSoundSrc = "select.ogg"; // sound for hover
-  const clickSoundSrc = "click.ogg";  // sound for click
+  const hoverSoundSrc = "select.ogg";
+  const clickSoundSrc = "click.ogg";
 
   links.forEach(link => {
 
-    // Hover sound (plays every time, no clipping)
     link.addEventListener("mouseenter", () => {
       const sound = new Audio(hoverSoundSrc);
       sound.volume = 1;
       sound.play();
     });
-
-    // Click sound (plays every time)
+      
     link.addEventListener("click", (e) => {
       const sound = new Audio(clickSoundSrc);
       sound.volume = 1;
