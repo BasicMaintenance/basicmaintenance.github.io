@@ -24,35 +24,48 @@
     <div class="container">
         <h1>"Homepage"</h1>
         <ul class="list">
-            <li><a href="https://old.reddit.com/" >REDDIT</a></li>
-            <li><a href="https://www.youtube.com/" >YOUTUBE</a></li>
-            <li><a href="https://account.proton.me/mail" >PROTONMAIL</a></li>
+            <li><a href="https://old.reddit.com/" target="_blank">REDDIT</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">YOUTUBE</a></li>
+            <li><a href="https://account.proton.me/mail" target="_blank">PROTONMAIL</a></li>
         </ul>
         <img class="divider" src="images/gradient-divider.png" alt="">
         <ul class="list">
-            <li><a href="https://www.udemy.com/">UDEMY</a></li>
-            <li><a href="https://www.w3schools.com/">W3 SCHOOLS</a></li>
-            <li><a href="https://github.com/">GITHUB</a></li>
-            <li><a href="https://bflix.la/">BFLIX</a></li>
-            <li><a href="https://monkeytype.com/">MONKEYTYPE</a></li>
-            <li><a href="https://chatgpt.com/">CHATGPT</a></li>
+            <li><a href="https://www.udemy.com/" target="_blank">UDEMY</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank">W3 SCHOOLS</a></li>
+            <li><a href="https://github.com/" target="_blank">GITHUB</a></li>
+            <li><a href="https://bflix.la/" target="_blank">BFLIX</a></li>
+            <li><a href="https://monkeytype.com/" target="_blank">MONKEYTYPE</a></li>
+            <li><a href="https://chatgpt.com/" target="_blank">CHATGPT</a></li>
         </ul>
     </div>
 
     <img class="title" src="images/logo.png" alt="">
 
     <audio id="hoverSound" src="select.ogg" preload="auto"></audio>
+    <audio id="hoverSound" src="click.ogg" preload="auto"></audio>
 
 <script>
   const links = document.querySelectorAll("a");
-  const audioSrc = "select.ogg"; // path to your sound
+
+  const hoverSoundSrc = "select.ogg"; // sound for hover
+  const clickSoundSrc = "click.ogg";  // sound for click
 
   links.forEach(link => {
-    link.addEventListener("mouseenter", function () {
-      const sound = new Audio(audioSrc);
+
+    // Hover sound (plays every time, no clipping)
+    link.addEventListener("mouseenter", () => {
+      const sound = new Audio(hoverSoundSrc);
       sound.volume = 1;
       sound.play();
     });
+
+    // Click sound (plays every time)
+    link.addEventListener("click", (e) => {
+      const sound = new Audio(clickSoundSrc);
+      sound.volume = 1;
+      sound.play();
+    });
+
   });
 </script>
 
