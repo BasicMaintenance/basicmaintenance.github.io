@@ -216,12 +216,12 @@ li {
 }
 
 #playButton {
-    font-color: gray;
+    color: white;
     cursor: pointer;
 }
 
 #playButton:active {
-    font-color: gray;
+    color: gray;
 }
 
 
