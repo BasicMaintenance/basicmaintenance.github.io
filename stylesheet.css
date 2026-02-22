@@ -193,11 +193,12 @@ li {
     margin: 2px 10px; 
     text-decoration: none; 
     background: none; 
-    z-index: 1; 
+    z-index: 1;
+    cursor: pointer;
 
     width: 300px;
 
-.list button::before { 
+#playButton::before { 
     content: ""; 
     position: absolute; 
     top: 50%; 
@@ -211,13 +212,8 @@ li {
     pointer-events: none; 
 } 
     
-.list button:hover::before { 
+#playButton:hover::before { 
     opacity: 1; 
-}
-
-#playButton {
-    color: white;
-    cursor: pointer;
 }
 
 #playButton:active {
