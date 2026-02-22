@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <audio id="myAudio">
+    <audio id="menu">
         <source src="menu.ogg" type="audio/mpeg">
     </audio>
 
@@ -44,7 +44,7 @@
         </ul>
         <img class="divider" src="images/gradient-divider.png" alt="">
         <ul>
-            <li> <button onclick="togglePlay()" id="playButton">PLAY</button></li>
+            <li> <a href="#" onclick="togglePlay()" id="playButton" class="paused">PLAY</a></li>
         </ul>
     </div>
 
@@ -54,18 +54,25 @@
     <audio id="hoverSound" src="click.ogg" preload="auto"></audio>
 
 <script>
- function togglePlay() {
-        var audio = document.getElementById("myAudio");
-        var button = document.getElementById("playButton");
+ function togglePlay(event) {
+            event.preventDefault(); // Prevent page jump
 
-        if (audio.paused) {
-            audio.play();
-            button.textContent = "PAUSE";
-        } else {
-            audio.pause();
-            button.textContent = "PLAY";
+            var audio = document.getElementById("menu");
+            var link = document.getElementById("playButton");
+
+            if (audio.paused) {
+                audio.play();
+                link.textContent = "PAUSE";
+                link.classList.remove("paused");
+                link.classList.add("playing");
+            } else {
+                audio.pause();
+                link.textContent = "PLAY";
+                link.classList.remove("playing");
+                link.classList.add("paused");
+            }
         }
-    }
+
   const links = document.querySelectorAll("a");
 
   const hoverSoundSrc = "select.ogg";
