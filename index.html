@@ -55,44 +55,48 @@
 
 <script>
  function togglePlay(event) {
-            event.preventDefault(); // Prevent page jump
+    event.preventDefault(); // Prevent page jump
 
-            var audio = document.getElementById("menu");
-            var link = document.getElementById("playButton");
+    var audio = document.getElementById("menu");
+    var link = document.getElementById("playButton");
 
-            if (audio.paused) {
-                audio.play();
-                link.textContent = "PAUSE";
-                link.classList.remove("paused");
-                link.classList.add("playing");
-            } else {
-                audio.pause();
-                link.textContent = "PLAY";
-                link.classList.remove("playing");
-                link.classList.add("paused");
-            }
-        }
+    if (audio.paused) {
+        audio.play();
+        link.textContent = "PAUSE";
+        link.classList.remove("paused");
+        link.classList.add("playing");
+    } else {
+        audio.pause();
+        link.textContent = "PLAY";
+        link.classList.remove("playing");
+        link.classList.add("paused");
+    }
+}
 
-  const links = document.querySelectorAll("a");
+const links = document.querySelectorAll("a");
 
-  const hoverSoundSrc = "select.ogg";
-  const clickSoundSrc = "click.ogg";
+const hoverSoundSrc = "select.ogg";
+const clickSoundSrc = "click.ogg";
 
-  links.forEach(link => {
+links.forEach(link => {
 
+    // Play hover sound for all links
     link.addEventListener("mouseenter", () => {
-      const sound = new Audio(hoverSoundSrc);
-      sound.volume = 1;
-      sound.play();
-    });
-      
-    link.addEventListener("click", (e) => {
-      const sound = new Audio(clickSoundSrc);
-      sound.volume = 1;
-      sound.play();
+        const sound = new Audio(hoverSoundSrc);
+        sound.volume = 1;
+        sound.play();
     });
 
-  });
+    // Play click sound for all links except the play/pause button
+    link.addEventListener("click", (e) => {
+        if (link.id !== "playButton") {  // <-- ADDED LINE**
+            const sound = new Audio(clickSoundSrc);
+            sound.volume = 1;
+            sound.play();
+        }  // <-- ADDED LINE**
+    });
+
+});
 </script>
 
 </body>
