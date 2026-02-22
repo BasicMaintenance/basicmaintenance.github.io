@@ -12,6 +12,10 @@
 
 </head>
 <body>
+    <audio id="myAudio">
+        <source src="menu.mp3" type="audio/mpeg">
+    </audio>
+
     
     <div class="blur"></div>
     <div class="ghost">
@@ -38,6 +42,10 @@
             <li><a href="https://monkeytype.com/" target="_blank">MONKEYTYPE</a></li>
             <li><a href="https://chatgpt.com/" target="_blank">CHATGPT</a></li>
         </ul>
+        <img class="divider" src="images/gradient-divider.png" alt="">
+        <ul>
+            <li> <button onclick="togglePlay()" id="playButton">Play</button></li>
+        </ul>
     </div>
 
     <img class="title" src="images/logo.png" alt="">
@@ -46,6 +54,18 @@
     <audio id="hoverSound" src="click.ogg" preload="auto"></audio>
 
 <script>
+ function togglePlay() {
+        var audio = document.getElementById("myAudio");
+        var button = document.getElementById("playButton");
+
+        if (audio.paused) {
+            audio.play();
+            button.textContent = "Pause";
+        } else {
+            audio.pause();
+            button.textContent = "Play";
+        }
+    }
   const links = document.querySelectorAll("a");
 
   const hoverSoundSrc = "select.ogg";
