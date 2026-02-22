@@ -182,7 +182,7 @@ li {
     opacity: 1; 
 }
 
-.playButton {
+#playButton {
     all: unset;
     position: relative; 
     display: inline-block; 
