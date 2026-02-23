@@ -89,7 +89,7 @@ links.forEach(link => {
     });
 
     link.addEventListener("click", (e) => {
-        if (link.id !== "playButton") {  // <-- ADDED LINE**
+        if (link.id !== "playButton") {
             const sound = new Audio(clickSoundSrc);
             sound.volume = 1;
             sound.play();
