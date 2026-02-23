@@ -147,6 +147,7 @@ ul {
 
 li {
     text-align: right;
+    list-style: none;
 }
 
 .list a { 
