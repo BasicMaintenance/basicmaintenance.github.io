@@ -182,7 +182,7 @@ li {
 }
 
 #playButton.playing {
-    color: gray;
+    color: rgb(140, 140, 140);
 }
 
 .list a::before { 
